@@ -12,3 +12,20 @@ except ImportError:
             return decorator
         return app
 
+from model import Item
+
+app = Flask(__name__)
+CORS(app)
+
+DATA_FILE = "data.json"
+
+def load_data():
+    if not os.path.exists(DATA_FILE):
+        return []
+    try:
+        with open(DATA_FILE, "r") as f:
+            return json.load()
+    except json.JSONDecodeError:
+        return []
+
+
