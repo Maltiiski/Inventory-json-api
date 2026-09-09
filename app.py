@@ -77,3 +77,22 @@ def add_inventory():
             }
         ), 400
 
+@app.route("/api/inventory/<item_id>", methods=["DELETE"])
+def delete_item(item_id):
+    items = load_data()
+
+    updated_items = [item for item in items if item.get("id") !=item_id]
+
+    if len(items) == len(updated_items):
+        return jsonify({
+            "status": "error",
+            "message": "Item ilang"
+        }), 404
+
+    save_data(updated_items)
+    return(
+        jsonify(
+            {"status": "success", "message": f"item {item_id} deleted!"}
+        ), 200,
+    )
+
