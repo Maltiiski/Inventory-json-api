@@ -22,3 +22,9 @@ class APIClient {
         return await response.json();
     }
 }
+
+class ItemCard {
+    constructor(data) {
+        this.data = data;
+    }
+}
