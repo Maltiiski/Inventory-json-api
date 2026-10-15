@@ -50,11 +50,11 @@ body {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vh;
+    gap: 1vh;
     background-color: var(--card-bg);
     width: 30vw;
     height: 45vh;
-    padding-top: 5vh;
+    padding-top: 1vh;
     border-radius: 20px;
     box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
 }
@@ -63,7 +63,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2vh;
+    gap: 3vh;
 }
 
 #add-item-form > * {
@@ -78,4 +78,15 @@ body {
 #btn-submit {
     background-color: var(--item-color);
     color: var(--bg-color);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dashboard > section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
