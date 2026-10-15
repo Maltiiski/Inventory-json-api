@@ -5,8 +5,8 @@
     --card-bg: #ffffff;
     --text-color: #2c3e50;
     --item-color: #3498db;
-    --inventory-color: #2ecc71;
-    --border-radius: 8px;
+    --cardcolor:  #ffffffa8;
+
 }
 
 * {
@@ -14,6 +14,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sauce Sans', sans-serif;
+    color: var(--text-color);
 }
 
 body {
@@ -89,4 +90,44 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
+}
+
+.panel.listing {
+    background-color: var(--card-bg);
+    width: 30vw;
+    height: 70vh;
+    padding: 1vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5vh;
+}
+
+#item-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.card-item {
+    background-color: #abd5f2;
+    min-width: 10vw;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.delete-btn {
+    background-color: #ff3434;
+    color: white;
+    padding: 2px;
+    border: none;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
 }
