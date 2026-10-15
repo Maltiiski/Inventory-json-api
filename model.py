@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 
 class Item:
-    def __init__(self, name, quantity=1, owner="N/A", valuation="Medium", item_id=None, created_at=None):
+    def __init__(self, name, quantity=1, owner="N/A", valuation="Mid", item_id=None, created_at=None):
         self.id = item_id if item_id else str(uuid.uuid4())[:8]
         self.name = name
         self.quantity = quantity
@@ -26,7 +26,7 @@ class Item:
 
     @valuation.setter
     def valuation(self, value):
-        allowed = ["Low", "Medium", "High"]
+        allowed = ["Cheap", "Mid", "Expensive"]
         if value.capitalize() not in allowed:
             raise ValueError("invalid value")
         self._valuation = value.capitalize()

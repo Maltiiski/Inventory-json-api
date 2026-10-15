@@ -9,12 +9,12 @@ class APIClient {
     }
 
     async fetchAllItems() {
-        const response = await fetch(`${this.baseURL}/items`);
+        const response = await fetch(`${this.baseURL}/get-items`);
         return await response.json();
     }
 
     async addItem(itemData) {
-        const response = await fetch(`${this.baseURL}/inventory`, {
+        const response = await fetch(`${this.baseURL}/add-items`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(itemData)
@@ -27,4 +27,9 @@ class ItemCard {
     constructor(data) {
         this.data = data;
     }
+
+    render() {
+
+    }
 }
+

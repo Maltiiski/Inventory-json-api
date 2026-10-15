@@ -24,7 +24,7 @@ def load_data():
         return []
     try:
         with open(DATA_FILE, "r") as f:
-            return json.load()
+            return json.load(f)
     except json.JSONDecodeError:
         return []
 
@@ -37,12 +37,12 @@ def save_data(data):
 def index():
     return render_template("index.html")
 
-@app.route("/api/items", methods=["GET"])
+@app.route("/api/get-items", methods=["GET"])
 def get_items():
-    items = load_data
+    items = load_data()
     return jsonify(items), 200
 
-@app.route("/api/inventory", methods=["POST"])
+@app.route("/api/add-item", methods=["POST"])
 def add_inventory():
     req_data = request.json or {}
 
