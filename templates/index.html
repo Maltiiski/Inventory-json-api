@@ -16,19 +16,14 @@
                 <h2>Add Item</h2>
                 <form id="add-item-form">
                     <input type="text" id="item-name" placeholder="Item Name (Example: Cocaine)" required>
-                    <br>
-                    <div class="form-row">
-                        <input type="number" id="item-qty" placeholder="Quantity">
-                        <br>
-                        <input type="text" id="item-owner" placeholder="Owner">
-                        <br>
-                        <select id="item-value">
-                            <option value="Low">Cheap</option>
-                            <option value="Medium" selected>Mid</option>
-                            <option value="High">Expensive</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-submit">Add Item</button>
+                    <input type="number" id="item-qty" placeholder="Quantity">
+                    <input type="text" id="item-owner" placeholder="Owner">
+                    <select id="item-value">
+                        <option value="Low">Cheap</option>
+                        <option value="Medium" selected>Mid</option>
+                        <option value="High">Expensive</option>
+                    </select>
+                    <button type="submit" id="btn-submit">Add Item</button>
                 </form>
             </section>
 
