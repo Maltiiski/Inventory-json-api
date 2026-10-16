@@ -115,9 +115,9 @@ body {
 
 .card-item {
     background-color: #abd5f2;
-    min-width: 10vw;
     padding: 12px;
     border-radius: 8px;
+    width: 27vw;
 }
 
 .delete-btn {
