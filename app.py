@@ -45,7 +45,7 @@ def get_items():
 @app.route("/api/add-item", methods=["POST"])
 def add_inventory():
     req_data = request.json or {}
-
+    print("Hey im here")
     try:
         new_item = Item(
             name=req_data.get("name", "Unnamed Object"),
