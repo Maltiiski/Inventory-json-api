@@ -1,0 +1,26 @@
+[
+    {
+        "id": "d9321a35",
+        "name": "Ballpoint Pen",
+        "quantity": 1,
+        "owner": "Aria",
+        "valuation": "Mid",
+        "created_at": "17-10-2026 17:02"
+    },
+    {
+        "id": "200363a0",
+        "name": "Pen refill",
+        "quantity": 3,
+        "owner": "Aria",
+        "valuation": "Cheap",
+        "created_at": "17-10-2026 17:02"
+    },
+    {
+        "id": "7aca96b1",
+        "name": "Wuling Car",
+        "quantity": 1,
+        "owner": "Dad",
+        "valuation": "Expensive",
+        "created_at": "17-10-2026 17:03"
+    }
+]

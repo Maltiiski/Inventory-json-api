@@ -19,9 +19,9 @@
                     <input type="number" id="item-qty" placeholder="Quantity">
                     <input type="text" id="item-owner" placeholder="Owner">
                     <select id="item-value">
-                        <option value="Low">Cheap</option>
-                        <option value="Medium" selected>Mid</option>
-                        <option value="High">Expensive</option>
+                        <option value="Cheap">Cheap</option>
+                        <option value="Mid" selected>Mid</option>
+                        <option value="Expensive">Expensive</option>
                     </select>
                     <button type="submit" id="btn-submit">Add Item</button>
                 </form>
@@ -31,17 +31,6 @@
                 <h2>Your Listed Items</h2>
                     <div id="item-list">
                         
-
-                        <div class="card-item" id="item">
-                            <div class="card-name">Fentanyl</div>
-                            <div class="card-meta">
-                                <span><strong>Stock:</strong> 15</span>
-                                <span><strong>Owner:</strong> Aria</span>
-                                <span><strong>Evaluation:</strong> Expensive</span>
-                                
-                                <button class="delete-btn" onclick="handleDelete('${this.data.id}')">Delete</button>
-                            </div>
-                        </div>
                     </div>
             </section>
         </main>

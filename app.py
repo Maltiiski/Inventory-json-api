@@ -45,16 +45,15 @@ def get_items():
 @app.route("/api/add-item", methods=["POST"])
 def add_inventory():
     req_data = request.json or {}
-    print("Hey im here")
     try:
         new_item = Item(
             name=req_data.get("name", "Unnamed Object"),
             quantity=req_data.get("quantity", 1),
             owner=req_data.get("owner", "N/A"),
-            valuation=req_data.get("valuation", "Medium")
+            valuation=req_data.get("valuation", "Mid")
         )
 
-        Items = load_data
+        Items = load_data()
         Items.append(new_item.to_dict())
         save_data(Items)
 
@@ -70,6 +69,7 @@ def add_inventory():
         )
 
     except ValueError as e:
+        print("the error is here")
         return jsonify(
             {
                 "status": "error",

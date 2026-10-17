@@ -4,7 +4,7 @@ class APIClient {
     }
 
     async deleteItem(itemId) {
-        const response = await fetch(`${this.baseURL}/items/${itemId}`, {method: 'DELETE'});
+        const response = await fetch(`${this.baseURL}/inventory/${itemId}`, {method: 'DELETE'});
         return await response.json();
     }
 
@@ -29,7 +29,8 @@ class ItemCard {
     }
 
     render() {
-        `<div class="card-item" id="item">
+        return `
+        <div class="card-item" id="item">
             <div class="card-name">${this.data.name}</div>
             <div class="card-meta">
                 <span><strong>Stock:</strong> ${this.data.quantity}</span>
@@ -79,9 +80,9 @@ document.getElementById('add-item-form').addEventListener('submit', async (e) =>
     const owner = document.getElementById('item-owner').value;
     const value = document.getElementById('item-value').value;
 
-    const result = api.addItem({
+    const result = await api.addItem({
         name: name,
-        quantity: qty,
+        quantity: parseInt(qty, 10),
         owner: owner,
         valuation: value
     })
@@ -93,3 +94,5 @@ document.getElementById('add-item-form').addEventListener('submit', async (e) =>
         alert(`Error: ${result.message}`)
     }
 })
+
+document.addEventListener('DOMContentLoaded', Loadpage);
